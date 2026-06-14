@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta buat WhatsApp preview -->
+<!-- Meta Grab WhatsApp -->
 <meta property="og:title" content="Buat Kamu ❤️">
-<meta property="og:description" content="Ada sesuatu buat kamu...">
-<meta property="og:image" content="https://semb-commits.github.io/untukamu/IMG-20260614-WA0026.jpg">
-<meta property="og:url" content="https://semb-commits.github.io/untukamu/">
+<meta property="og:description" content="Ada yang mau aku bilang...">
+<meta property="og:image" content="IMG-20260614-WA0026.jpg">
 <meta property="og:type" content="website">
 
 <title>Buat Kamu</title>
@@ -17,17 +16,17 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-  body, html { height: 100%; overflow: hidden; background: #fff; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+  body, html { height: 100%; overflow: hidden; background: #fafafa; }
 
   .page {
     position: absolute;
     width: 100%; height: 100%;
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
-    text-align: center; padding: 30px;
+    text-align: center; padding: 35px;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.9s ease;
   }
   .page.active { opacity: 1; pointer-events: all; }
 
@@ -35,53 +34,58 @@
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
     background: url('IMG-20260614-WA0026.jpg') center/cover no-repeat;
-    opacity: 0.25; z-index: -1;
+    opacity: 0.18; z-index: -1;
   }
 
   .text {
-    font-size: 1.2rem; line-height: 1.8;
-    color: #2c2c2c; max-width: 320px;
-    text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+    font-size: 1.15rem; line-height: 1.9;
+    color: #2a2a2a; max-width: 340px;
+    text-shadow: 0 1px 4px rgba(255,255,255,0.9);
     font-weight: 500;
   }
 
   .btn-next {
-    margin-top: 40px; padding: 12px 30px;
-    border: none; border-radius: 25px;
-    background: #ff6b81; color: white;
-    font-size: 1rem; cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255,107,129,0.4);
+    margin-top: 45px; padding: 13px 32px;
+    border: none; border-radius: 30px;
+    background: linear-gradient(135deg, #ff6b81, #ff8fa3);
+    color: white; font-size: 1rem; cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255,107,129,0.4);
+    transition: transform 0.2s;
   }
+  .btn-next:active { transform: scale(0.95); }
 
   .photo {
-    width: 180px; height: 180px;
+    width: 190px; height: 190px;
     border-radius: 50%; object-fit: cover;
-    border: 4px solid #ff6b81;
-    box-shadow: 0 0 20px rgba(255,107,129,0.5);
-    margin-bottom: 20px;
+    border: 5px solid #ff6b81;
+    box-shadow: 0 0 25px rgba(255,107,129,0.5);
+    margin-bottom: 25px;
     cursor: pointer;
   }
 
   .wa-buttons {
-    position: fixed; bottom: 30px;
+    position: fixed; bottom: 28px;
     width: 100%; display: flex;
     justify-content: space-between;
-    padding: 0 20px; pointer-events: none;
+    padding: 0 22px; pointer-events: none;
+    z-index: 10;
   }
   .wa-buttons button {
-    pointer-events: all; padding: 12px 18px;
-    border: none; border-radius: 20px;
+    pointer-events: all; padding: 12px 20px;
+    border: none; border-radius: 25px;
     background: #25D366; color: white;
-    font-weight: bold; cursor: pointer;
-    box-shadow: 0 3px 10px rgba(37,211,102,0.3);
+    font-weight: 600; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37,211,102,0.35);
   }
 
   .music-btn {
-    position: fixed; top: 20px; right: 20px;
-    background: rgba(255,255,255,0.8);
+    position: fixed; top: 18px; right: 18px;
+    background: rgba(255,255,255,0.85);
     border: none; border-radius: 50%;
-    width: 45px; height: 45px;
+    width: 46px; height: 46px;
     cursor: pointer; font-size: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    z-index: 10;
   }
 </style>
 </head>
@@ -95,30 +99,33 @@
 </audio>
 
 <div class="page active" id="p1">
-  <div class="text" data-aos="fade-up">
-    Aku nggak tau harus mulai dari mana.<br><br>
-    Tapi sejak ada kamu, hari yang biasanya biasa aja jadi punya warna. 
-    Senyum kamu itu kayak charger buat hati aku yang sering lowbat.
+  <div class="text" data-aos="fade-up" data-aos-duration="1200">
+    Aku sering mikir, kenapa rasanya beda banget 
+    sejak kamu masuk ke hidup aku.<br><br>
+    Hal kecil yang dulu nggak berarti, sekarang jadi hal 
+    yang bikin aku senyum sendiri. Mungkin ini yang 
+    orang bilang jatuh cinta.
   </div>
-  <button class="btn-next" onclick="nextPage(1)" data-aos="fade-up" data-aos-delay="300">Lanjut</button>
+  <button class="btn-next" onclick="nextPage(1)" data-aos="fade-up" data-aos-delay="400">Lanjut</button>
 </div>
 
 <div class="page" id="p2">
-  <div class="text" data-aos="fade-up">
-    Aku tau aku bukan yang paling sempurna.<br><br>
-    Tapi aku janji, aku bakal usaha setiap hari jadi orang yang bikin kamu 
-    nggak nyesel milih aku. Nggak ada yang lebih tenang selain denger suara 
-    kamu bilang "aku gapapa".
+  <div class="text" data-aos="fade-up" data-aos-duration="1200">
+    Aku nggak janji jadi orang yang sempurna buat kamu.<br><br>
+    Tapi aku janji bakal belajar, bakal usaha, dan bakal 
+    tetap milih kamu setiap hari. Bahkan di hari ketika 
+    aku sendiri nggak tau cara milih yang bener.
   </div>
-  <button class="btn-next" onclick="nextPage(2)" data-aos="fade-up" data-aos-delay="300">Satu Lagi</button>
+  <button class="btn-next" onclick="nextPage(2)" data-aos="fade-up" data-aos-delay="400">Satu Lagi</button>
 </div>
 
 <div class="page" id="p3">
-  <img src="IMG-20260614-WA0026.jpg" class="photo" onclick="alert('I love you 💖')" data-aos="zoom-in">
-  <div class="text" data-aos="fade-up" data-aos-delay="200">
-    Jadi, boleh nggak aku jaga kamu selamanya?<br><br>
-    Bukan cuma hari ini, tapi setiap hari setelah ini. 
-    Kamu mau nggak jadi alasan aku pulang dengan senyum?
+  <img src="IMG-20260614-WA0026.jpg" class="photo" onclick="alert('Aku sayang kamu 💖')" data-aos="zoom-in" data-aos-duration="1000">
+  <div class="text" data-aos="fade-up" data-aos-delay="300">
+    Jadi... maukah kamu jadi alasan aku tetap semangat 
+    bangun pagi dan jadi orang yang lebih baik?<br><br>
+    Aku nggak minta banyak, cukup kamu yang tetap ada 
+    di samping aku.
   </div>
 </div>
 
@@ -129,7 +136,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ duration: 1000, once: true });
+  AOS.init({ once: true });
 
   function nextPage(current) {
     document.getElementById('p' + current).classList.remove('active');
@@ -147,11 +154,11 @@
       music.pause();
       isPlaying = false;
     } else {
-      music.play();
+      music.play().catch(()=>{});
       isPlaying = true;
     }
   }
 </script>
 
 </body>
-  </html>
+     </html>
